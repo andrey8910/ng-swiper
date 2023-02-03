@@ -1,0 +1,21 @@
+
+<swiper
+  [slidesPerView]="1"
+  [spaceBetween]="50"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+  [navigation]="true"
+
+  [scrollbar]="{ draggable: true }"
+>
+  <ng-template swiperSlide>
+    <img src="https://media.dominos.ua/slider/slide_image/2023/01/19/CinnamonRolls_Slider_PC_UKR.jpg" alt="slide">
+  </ng-template>
+  <ng-template swiperSlide>
+    <img src="https://media.dominos.ua/slider/slide_image/2022/12/18/PotatoesMushroomSausages_Slider_PC_UKR.jpg" alt="slide">
+  </ng-template>
+  <ng-template swiperSlide>
+    <img src="https://media.dominos.ua/slider/slide_image/2023/01/15/NewFriesPizzaNational_Slider_PC_UKR.jpg" alt="slide">
+  </ng-template>
+</swiper>
+

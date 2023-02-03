@@ -1,0 +1,40 @@
+
+  <div class="logo">
+  </div>
+  <nav class="menu" *ngIf="!showMenu">
+    <ul>
+      <li> <a routerLink="/main" routerLinkActive="active">Головна</a></li>
+      <li> <a routerLink="/about" routerLinkActive="active">Про нас</a></li>
+      <li> <a routerLink="/contact" routerLinkActive="active">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <nav [@openClose]="showMenu ? 'open' : 'closed'" class="menu-mobile" >
+    <ul>
+      <li>
+        <a
+        routerLink="/main"
+        routerLinkActive="active"
+        (click)="this.showMenu = !this.showMenu"
+      >Головна</a>
+      </li>
+      <li>
+        <a routerLink="/about"
+           routerLinkActive="active"
+           (click)="this.showMenu = !this.showMenu"
+        >Про нас</a>
+      </li>
+      <li>
+        <a routerLink="/contact"
+           routerLinkActive="active"
+           (click)="this.showMenu = !this.showMenu"
+        >Контакти</a>
+      </li>
+    </ul>
+  </nav>
+
+  <button class="menu-btn" (click)="this.showMenu = !this.showMenu">
+    <span *ngIf="!showMenu">&#9776;</span>
+    <span *ngIf="showMenu">&#9747;</span>
+  </button>
+

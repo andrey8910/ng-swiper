@@ -1,0 +1,38 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  header{
+    flex: 0 0 60px;
+  }
+  main{
+    flex: 1 1 auto;
+    padding: 0 50px;
+    min-height: 80vh;
+
+
+  }
+  footer{
+    flex: 0 0 80px;
+  }
+
+  @media only screen and (max-width: 840px) {
+    main{
+      padding: 0 30px;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    main{
+      padding: 0 20px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    main{
+      padding: 0;
+    }
+  }
+
+}
+
